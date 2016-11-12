@@ -1,0 +1,135 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Homepage</title>
+	<meta name="description" content="Daniel's Portfolio">
+	<meta name="author" content="Daniel">
+	<!--CSS Stylesheet-->
+	<link rel="stylesheet" href="css/css.css?v=1.0">
+	
+	<!-- Ubuntu Font from Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+	
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" />
+	
+	<!-- Image Carousel-->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="topbar">
+
+			<h2>DANIEL MCCLUSKEY</h2>	
+			<div class="breadbar">
+				<ul>
+					<li><a href="about.html">ABOUT</a></li>
+
+					<li><a href="mailto:dmccluskey98@gmail.com">EMAIL</a></li>
+
+					<li><a href="https://twitter.com/">TWITTER</a></li>
+
+					<li><a href="projects.html">PROJECTS</a></li>
+
+				</ul>
+			</div>
+		</div>
+		
+		<div class="carousel">
+			<div class="imagecar">
+				<div>
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.</p>
+				</div>
+				<div>
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.</p>
+				</div>
+				<div>
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.</p>
+				</div>
+			</div>
+		</div>
+		
+					
+		<div class="content">
+			<h1>Welcome to my Portfolio</h1>
+			<hr></hr>
+			<div class="leftcol">
+				<h1>About Me</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.</p>
+				<div class="button">
+					<h3>Learn More</h3>
+				</div>
+			</div>
+			<div class="rightcol">
+				<h1>Current Projects</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.</p>
+				<div class="button">
+					<h3>Learn More</h3>
+				</div>
+			</div>	
+
+			<div class="leftcol">
+				<h1>About Me</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.</p>
+				<div class="button">
+					<h3>Learn More</h3>
+				</div>
+			</div>
+			<div class="rightcol">
+				<h1>Current Projects</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.</p>
+				<div class="button">
+					<h3>Learn More</h3>
+				</div>
+			</div>	
+			<div class="leftcol">
+				<h1>About Me</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.</p>
+				<div class="button">
+					<h3>Learn More</h3>
+				</div>
+			</div>
+			<div class="rightcol">
+				<h1>Current Projects</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis mauris in finibus tempor.</p>
+				<div class="button">
+					<h3>Learn More</h3>
+				</div>
+			</div>				
+		</div>
+		<div class="bottombar">
+			<h2>REMINDER TO FILL IN CONTENT HERE, SITEMAP ETC</h2>
+		</div>
+	</div>	
+	
+			
+	
+	
+	
+	<!--The Following is for the Image Carousel-->
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+	<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+    $(document).on('ready', function() {
+      $('.imagecar').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+		dots: false,
+		prevArrow: false,
+		nextArrow: false,
+		autoplay: true,
+		autoplaySpeed: 2000
+      });
+    });
+	</script>
+				
+</body>
