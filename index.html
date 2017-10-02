@@ -23,32 +23,35 @@
 	
 
 	<div class="wrapper">
-		<div onclick="ayy()" class="leftcol">
+		<div  class="leftcol">
 			<img src="images/logo.png"/>			
-			<div class="button">
+			<div onclick="ayy()" class="button">
 				<strong><p>RANDOM PLACE</p></strong>
+			</div>
+			<div onclick="RandomCity()" class="button">
+				<strong><p>RANDOM CITY</p></strong>
 			</div>
 		</div>
 		
 					
 		<div class="rightcol" id="box">
+			<div id="RandomCityBox">
+				<a class="TownName RandomCityBox" href=""><h1 class="RandomCityBox button">YOU SHOULD DROP AT <span class="RandomCityBox" id="TownNameSpan">Pochinki</span></a></h1>
+			</div>
 			<div id="container">
-				<img class="" onclick="RandomCity()" src="images/map.jpg"/>				
+				<img class="image" src="images/map.jpg"/>				
 				<div class="a">
 					<img src="images/para.png"/>
 				</div>
-			</div>			
+			</div>		
+
+			
 		</div>
 	</div>
 	<script src="js/rand.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	
 	<script>
-	$( document ).ready(function() {
-		ayy();
-	
-	
-	});
 	</script>
 </body>
 

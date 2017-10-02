@@ -70,7 +70,7 @@ position:absolute;
 }
 .rightcol {
 	width:48%;
-	text-align:right;
+	text-align:center;
 	display: inline-block;
 	float:left;
 }
@@ -87,8 +87,24 @@ position:absolute;
 	font-family: 'Arial', sans-serif, 'Apple SD Gothic Neo';
 	padding:30px;
 	text-align:center;
+	margin:20px;
+}
+
+.button:hover {
+	background-color:#d06600;
+	cursor: pointer; 
+	cursor: hand;
 }
 
 .a img {
 	width:100%;
+}
+
+.RandomCityBox {
+	display:none;
+	color:white;
+}
+.RandomCityBox a {
+	color:white;
+	text-decoration:underline;
 }
