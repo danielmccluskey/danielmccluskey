@@ -81,7 +81,7 @@ function RandomQuadrant()
 function ayy() {
 	$(".a").show();
 	$(".image").width('');
-	$(".image").height('100vh');
+	$(".image").height('90vh');
 	
 	$(".RandomCityBox").hide();
 	$(".RandomQuadBox").hide();
