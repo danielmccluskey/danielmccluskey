@@ -18,9 +18,9 @@ var imgsArray = [
 	["Sosnovka Military Base", "https://pubg.gamepedia.com/Sosnovka_Military_Base", "images/maps/Military.jpg"]
 ];
 
-
 function RandomCity(){	
 	$(".a").hide();
+	$(".RandomQuadBox").hide();
 	$(".RandomCityBox").show();
     var newq = generateRandomForArray(0,14);
 	$(".image").attr('src', imgsArray[newq][2]);
@@ -33,9 +33,49 @@ function RandomCity(){
 };
 
 
+
+
+
+
 function generateRandomForArray(min, max) {
   var num = Math.random() * (max - min) + min;
   return Math.floor(num);
+}
+
+var HorizontalQuad = ["A","B","C","D","E","F","G","H"];
+var VerticalQuad = ["I","J","K","L","M","N","O","P"];
+
+function RandomQuadrant()
+{
+	var first = generateRandomForArray(0,7);
+	var second = generateRandomForArray(0,7);
+	
+	var combo = HorizontalQuad[first] + VerticalQuad[second];
+	
+	var ImageLink = "https://pubg.gamepedia.com/" + combo + "_(Map_Section)";
+	
+	var MapNum = ((8*second)+first)+1;
+	
+	if (MapNum < 10)
+	{
+		MapNum = "0" + String(MapNum);
+	}
+
+	
+	var ImageDir = 'images/maps/quads/images/Map_' + MapNum + '.gif';
+	
+	$(".a").hide();
+	$(".RandomCityBox").hide();
+	$(".RandomQuadBox").show();
+	
+	$(".image").attr('src', ImageDir);
+	$(".image").width('100%');
+	$(".image").height('');
+	$(".TownName").attr('href', ImageLink);
+	//$(".TownName").attr('innerHTML', imgsArray[newq][0]);
+
+	document.getElementById('QuadNameSpan').innerHTML = combo;
+	
 }
 
 function ayy() {
@@ -44,6 +84,8 @@ function ayy() {
 	$(".image").height('100vh');
 	
 	$(".RandomCityBox").hide();
+	$(".RandomQuadBox").hide();
+	
 	$(".image").attr('src', 'images/map.jpg');
 	$( '.a' ).each(function( index ) {
 	  $(this).animate({
