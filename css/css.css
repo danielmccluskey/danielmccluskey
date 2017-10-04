@@ -3,7 +3,7 @@ body {
 	margin:0;
 	padding:0;
 	height:100%;
-	background-color:#1b1b1b;
+	background-color:black;
 	font-family: 'Ubuntu', sans-serif;
 	width:100%;
 }
@@ -60,7 +60,7 @@ position:absolute;
 	text-align:left;
 	display: inline-block;
 	float:left;
-	background-color:#1b1b1b;
+	
 }
 
 .leftcol img {
@@ -87,7 +87,16 @@ position:absolute;
 	font-family: 'Arial', sans-serif, 'Apple SD Gothic Neo';
 	padding:10px;
 	text-align:center;
-	margin:20px;
+	margin:10px;
+}
+
+.buttonalt {
+	background-color:#e78425;
+	color:#ffffff;
+	font-family: 'Arial', sans-serif, 'Apple SD Gothic Neo';
+	padding:10px;
+	text-align:center;
+	margin:10px;
 }
 
 .button:hover {
@@ -98,6 +107,9 @@ position:absolute;
 
 .a img {
 	width:100%;
+}
+.a {
+	display:none;
 }
 
 .RandomCityBox {
