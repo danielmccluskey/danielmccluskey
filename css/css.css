@@ -85,7 +85,7 @@ position:absolute;
 	background-color:#e78425;
 	color:#ffffff;
 	font-family: 'Arial', sans-serif, 'Apple SD Gothic Neo';
-	padding:30px;
+	padding:10px;
 	text-align:center;
 	margin:20px;
 }
@@ -105,6 +105,14 @@ position:absolute;
 	color:white;
 }
 .RandomCityBox a {
+	color:white;
+	text-decoration:underline;
+}
+.RandomQuadBox {
+	display:none;
+	color:white;
+}
+.RandomQuadBox a {
 	color:white;
 	text-decoration:underline;
 }
