@@ -18,7 +18,7 @@ a {
 			padding:10px;
 			padding-left:0px;
 			padding-right:0px;
-			background-color:#30c9e9;
+			background-color:#41aeff;
 		}
 
 /*My Attempt at a Liquid layout, Inspiration taken from Bootstrap Frameworks column system*/
@@ -176,7 +176,9 @@ a {
 
 
 
-
+.button {
+	background-color:#41aeff;
+}
 
 
 
