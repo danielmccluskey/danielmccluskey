@@ -24,9 +24,7 @@ a {
 /*My Attempt at a Liquid layout, Inspiration taken from Bootstrap Frameworks column system*/
 
 .colr {
-	float:clear;
-	margin-left:4%;
-	box-sizing: border-box;
+	float:left;
 }
 .col {
 	float:left;
@@ -221,16 +219,22 @@ a {
 
 }
 
+.title h4 {
+	margin-bottom:auto;
+	line-height: 2.35;
+	color:#1EAEDB;
+}
+
 /*Classes for the Slick Image Carousel*/
 .carousel {
 	
 }
 .imagecar {
-	background-color:#30c9e9;
+	background-color:#41aeff;
 	height:500px;
 	color:#FCFFF5;
 }
-.imagecar h1 {
+.imagecar h2 {
 	text-align: center;
 	margin-top:100px;
 }
@@ -251,6 +255,13 @@ a {
 .content { 
 	margin-top:0px;
 	padding-bottom:90px;
+}
+
+.container {
+	-webkit-box-shadow: 10px 10px 162px -38px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 162px -38px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 162px -38px rgba(0,0,0,0.75);
+	clear: both;
 }
 
 
