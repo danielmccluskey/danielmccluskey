@@ -17,10 +17,13 @@ Go to the repository you wish to copy to your device and click on `Clone or Down
 ![OpenRepo](IMG-GitHub-Desktop/3OpenRepo.PNG)
 
 ## 
+
 Depending on what browser you are using, you may get a pop-up box asking you to confirm whether or not you wish to open this link. On Google Chrome, this appears at the top of the screen in the middle. 
 
 ![Confirmation](IMG-GitHub-Desktop/4OpengithubDesktop.PNG)
+
 ## 
+
 When it opens in GitHub Desktop, you will be asked to choose where you want the repository to be cloned to. Once you have chosen a suitable directory, click on `Clone` at the bottom of the window.
 
 ![Download](IMG-GitHub-Desktop/5Clone.PNG)
@@ -50,12 +53,16 @@ Once it has refreshed you will see that your changes appear on the Changelist an
 If you do not wish to commit a file, you can either un-check it from the File changelist or Right click it and Ignore the file.
 
 ![Download](IMG-GitHub-Desktop/8Changes.PNG)
+
 ## 
+
 When committing, you should make sure that your Commit summary and desctription actually tell you what changes you have made. This is good practice for work in the industry and also helps you find a commit if you ever need to revert. 
 Some examples of **Bad** summaries would be `asdafdfsdsdcds` or `Fixed the Thing`. 
 
 ![Download](IMG-GitHub-Desktop/9Changedescription.PNG)
+
 ## 
+
 Once you are happy with your commit description, you can go ahead and click `Commit to Master`. Once you have committed, you will need to `Push` that commit to GitHub, you can do this by clicking the `Push Origin` button at the top of the window.
 
 ![Download](IMG-GitHub-Desktop/10ComittedA.png)
