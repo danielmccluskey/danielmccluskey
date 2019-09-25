@@ -19,4 +19,4 @@ List of generic text tutorials:
 - [How to Accept a GitHub classrooms assignment and use GitHub Desktop](https://www.youtube.com/watch?v=0NqRm0qBTzI)
 
 ## Module specific
-- [CT40XX - Intro to Artificial Intelligence](http://danielunity.com/tutorials/CT40XX/README)
+- [CT40XX - Intro to Artificial Intelligence](http://danielunity.com/tutorials/CT40XX/CT40XX)
