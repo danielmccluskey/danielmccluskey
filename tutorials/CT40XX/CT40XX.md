@@ -22,4 +22,4 @@ This repository contains the tutorials created for CT40XX Intro to AI.
   - [Installing Library Commands](http://danielunity.com/tutorials/CT40XX/Week-3/Task2/CT40XX/Week3/Task2/Commands)
 
 - Task 3:
-  - Matplot Lib tutorial: [HTML Preview](http://danielunity.com/tutorials/CT40XX/Week-3/Task2/CT40XX/Week3/Task3/CT40XX-Week3-Tutorial.html) | [Jupyter Notebook](http://danielunity.com/tutorials/CT40XX/Week-3/Task2/CT40XX/Week3/Task3/CT40XX-Week3-Tutorial.ipynb)
+  - Matplot Lib tutorial: [HTML Preview](http://danielunity.com/tutorials/CT40XX/Week3/Task3/CT40XX-Week3-Tutorial.html) | [Jupyter Notebook](http://danielunity.com/tutorials/CT40XX/Week3/Task3/CT40XX-Week3-Tutorial.ipynb)
