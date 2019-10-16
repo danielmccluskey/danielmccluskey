@@ -1,3 +1,5 @@
+![Uoglogo](IMG/uoglogo.jpg)
+
 # Opening an Unreal project and using the Visual Studio development environment
 Quick setup and guide for using Visual Studio with UE4 for the AI assignment.
 
