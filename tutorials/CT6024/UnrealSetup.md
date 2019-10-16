@@ -5,8 +5,8 @@ Quick setup and guide for using Visual Studio with UE4 for the AI assignment.
 This first step will change the projects directory configurations to match where your Unreal Install is located. Just right click on the project file and click `Switch Unreal Engine Version...`.
 
 ![Switch Project1](IMG/SwitchProject1.PNG)
-Then Select `4.22` from the drop down list, this is the UE4 version required for the assignment.
 
+Then Select `4.22` from the drop down list, this is the UE4 version required for the assignment.
 
 ![Switch Project2](IMG/SwitchProject2.PNG)
 
