@@ -50,13 +50,21 @@ I've included the steps for the installer if you get stuck in the Dropdown below
     <summary>Installation Steps</summary>
 
 ![Git1](IMG-AddingGitignore/git1.PNG)
+
 ![Git1](IMG-AddingGitignore/git2.PNG)
+
 ![Git1](IMG-AddingGitignore/git3.PNG)
+
 ![Git1](IMG-AddingGitignore/git4.PNG)
+
 ![Git1](IMG-AddingGitignore/git5.PNG)
+
 ![Git1](IMG-AddingGitignore/git6.PNG)
+
 ![Git1](IMG-AddingGitignore/git7.PNG)
+
 ![Git1](IMG-AddingGitignore/git8.PNG)
+
 ![Git1](IMG-AddingGitignore/git9.PNG)
 
 
