@@ -71,3 +71,80 @@ I've included the steps for the installer if you get stuck in the Dropdown below
 </details>
 
 ## Opening the Git Command line
+Head to your repository directory, in my case its in my `Documents/GitHub/Unity-AI-SpyvsGuard` directory. (In GitHub Desktop you can hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> to open the folder!).
+
+Right click and hit `Git Bash Here`, if you cannot see this option you may have to reinstall your computer after installing Git.
+
+![Gitbashhere](IMG-AddingGitignore/gitbashhere.PNG)
+
+## Account Setup - Windows
+Once you have installed Git you will need to configure your GitHub settings so that you can access your repositories and push commits to them. You will need to open a Command Prompt Window or Git Bash, you can find both of these in your start menu. For this tutorial, I will be using Git Bash (Which you installed in the last step).
+
+When you have opened your prefered program you will need to type the following, filling in your GitHub details in place of `YOUR NAME` and `YOUR EMAIL` etc.
+
+```bash
+git config --global user.name "YOUR USERNAME"
+```
+
+and also:
+
+```bash
+git config --global user.email "YOUR EMAIL"
+```
+
+## Generating your Keys
+You will now need to setup an ssh key so that you can securely connect to GitHub's servers.
+
+Generate a keypair using the following commands:
+
+    ssh-keygen -t rsa -C "YOUR EMAIL"
+
+You then need to copy the contents of your public key (`id_rsa.pub`) file and add it to your GitHub settings, you can do this by right clicking `id_rsa.pub` and opening it with notepad.
+
+- Go to your github Account Settings.
+- Click `SSH Keys`.
+- Click `Add SSH Key`.
+- Add a decriptive name, so that you can recognise where each key is being used
+
+![3 Ssh](IMG-GitHub-CMDLine/3-ssh.PNG)
+
+You will then need to test that you have done everything correctly by using the following command:
+    
+    ssh -T git@github.com
+
+If you get something along the lines of the line below, then you have successfully connected your account to GitHub, you are now ready to use Git on the command line!
+
+![4 Itworked](IMG-GitHub-CMDLine/4-itworked.PNG)
+
+## Removing the Tracked files
+The first step is to remove *all* files from the tracked staging area of your repository, we can do this by typing the following command into the Git Bash window and then hit <kbd>Enter</kbd>:
+
+```bash 
+git rm -r --cached *
+```
+
+## Adding back the necessary files
+Now we need to add the necessary files back to the tracking area, type the following command and hit <kbd>Enter</kbd>.
+
+```bash
+git add .
+```
+
+*The fullstop at the end means "Everything from this directory"*
+
+## Committing this change
+Next we can commit these changes to GitHub:
+
+```bash
+git commit -m "Added new Gitignore"
+```
+
+## Pushing the Changes
+Now to Push these changes directly to GitHub:
+
+```bash
+git push
+```
+
+## Done
+Now your repository should be using the GitIgnore!
