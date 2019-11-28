@@ -24,20 +24,24 @@ Just by adding one file, I was able to remove **46mb** of junk that Unity genera
 # How to actually add the .gitignore
 You might have to use a different method depending on if you wish to add the .gitignore to a new or existing repository.
 
-## Adding to a new repository
+# Adding to a new repository
 To add an ignore file to a new repository, just simply download the [Unity Gitignore file here](https://connectglosac-my.sharepoint.com/:u:/g/personal/s2116955_glos_ac_uk/EQrkq5LAY0hKlM05ICVC3sQBFBPCtH2oJNYLQ7ipqW8Iqw?e=b41GZ8), which contains all of the directories and files that Git should ignore for Unity projects.
 
 Once downloaded just simply place it in your repository, Commit and push the changes. Then add your Unity project.
 
-## Adding to an existing Unity Project
+# Adding to an existing Unity Project
 If you already have a repository with a Unity project and wish to add an ignore file to it, you will have to go through a few extra steps, but this is worth it in the long run.
 
-### Downloading the .gitignore file
+## Downloading the .gitignore file
 Download the following .gitignore file and place it in the root of your repository (The very start/first folder of your repository).
 
 - [.gitignore Download](https://connectglosac-my.sharepoint.com/:u:/g/personal/s2116955_glos_ac_uk/EQrkq5LAY0hKlM05ICVC3sQBFBPCtH2oJNYLQ7ipqW8Iqw?e=b41GZ8)
 
-### Installing Git
+You then need to commit and push this to GitHub!
+
+![Addedgitignore](IMG-AddingGitignore/addedgitignore.PNG)
+
+## Installing Git
 In order to apply the changes of the gitignore to all files across your repository you will need a command line version of Git. For this, I will be using Git Bash, which can be downloaded and installed at [https://git-scm.com/downloads](https://git-scm.com/downloads).
 
 Download the Windows version and follow the installer.
