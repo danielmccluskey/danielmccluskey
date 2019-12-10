@@ -18,6 +18,7 @@ The behaviour that moves the agent from their current position to the position t
 #### GOAP Perform Action
 The behaviour that actually performs the action such as infecting an agent.
 
+# GOAP Agent
 
 # GOAP Actions
 
