@@ -1,3 +1,59 @@
+body {
+    background-color: #f3f3f3;
+}
+
+.bodycontainer {
+    background-color: #ffffff;
+}
+
+.section-header {
+    text-align: left;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+    .section-header p {
+        margin-bottom: 0;
+        padding-left: 2rem;
+        color: white;
+    }
+
+.section-tablist ul {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.section-tablist li {
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.section-tablist div p {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.section-tablist .button {
+    transition: .5s ease;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+    .section-tablist .button:hover {
+        background-color: #f3f3f3;
+        border-color: #f3f3f3;
+    }
+
 .title {
     text-align: center;
 }
@@ -22,6 +78,14 @@
 .content {
     padding: 4rem 0;
     margin-bottom: 0;
+}
+
+.contentfade {
+    padding: 4rem 0;
+    margin-bottom: 100px;
+    max-height: 250px;
+    position: relative;
+    overflow: hidden;
 }
 
 @media (min-width: 550px) {
@@ -72,14 +136,69 @@
 }
 
 .Overlaytext {
-    width: 80%;
+    width: 60%;
     color: black;
     font-size: 20px;
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -25%);
+    -ms-transform: translate(-50%,-25%);
+    transform: translate(-50%, -25%);
     text-align: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    padding: 2rem;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.content .fadeout {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 150px 0;
+    padding-bottom: 0px;
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, white);
+}
+
+.fadeout a {
+    background-color: #E1FFFF;
+}
+
+.fadeout .button {
+    color: black;
+}
+
+#aboutDiv {
+}
+
+.row p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.row h5 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+iframe {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: -webkit-calc(100% - 4rem);
+    width: -moz-calc(100% - 4rem);
+    width: calc(100% - 4rem);
+}
+
+.gitbuttondiv {
+    padding-left: 2rem;
 }

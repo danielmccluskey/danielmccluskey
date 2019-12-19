@@ -1,0 +1,152 @@
+﻿<!doctype html>
+
+<html lang="en">
+<!---->
+<head>
+    <meta charset="utf-8">
+    <title>Daniel McCluskey - Programmer</title>
+    <meta name="description" content="Daniel's Portfolio">
+    <meta name="author" content="Daniel">
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <!--CSS Stylesheet-->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136079774-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-136079774-1');
+    </script>
+
+    <!--Github buttons-->
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+    <link rel="stylesheet" href="/highlight/styles/default.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="header">
+            <div class="row">
+                <h2 class="title">DANIEL MCCLUSKEY</h2>
+                <h4 class="title">AI Programmer</h4>
+            </div>
+        </section>
+        <div class="row">
+            <div class="12 columns">
+                <div class="content row border-top">
+                    <h3>UE4 - GOAP C++ only implementation</h3>
+                    <p>This Unreal Engine 4 project is to demonstrate a Goal Orientated Action Planning system implemented without Unreals Blackboard or Blueprint systems.</p>
+                    <p>It uses a Finite state machine to...</p>
+                    <p><a href="https://github.com/danielmccluskey/Unity-AI-SpyVsGuard">Github</a> | <a href="https://www.youtube.com/watch?v=0Y1EGevHg1s">YouTube</a> | <a href="resources/AI.pdf">Documentation</a></p>
+                    <!-- Place this tag where you want the button to render. -->
+                    <a class="github-button" href="https://github.com/danielmccluskey/Unity-AI-SpyVsGuard" data-icon="octicon-star" data-show-count="true" aria-label="Star danielmccluskey/Unity-AI-SpyVsGuard on GitHub">Star</a>
+                    <!-- Place this tag where you want the button to render. -->
+                    <a class="github-button" href="https://github.com/danielmccluskey/Unity-AI-SpyVsGuard/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork danielmccluskey/Unity-AI-SpyVsGuard on GitHub">Fork</a>
+                    <!-- Place this tag where you want the button to render. -->
+                    <a class="github-button" href="https://github.com/danielmccluskey/Unity-AI-SpyVsGuard/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download danielmccluskey/Unity-AI-SpyVsGuard on GitHub">Download</a>
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/0Y1EGevHg1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="row">
+                    <h3>The Planner</h3>
+                </div>
+                <div class="content row border-top">
+                    <pre><code class="">
+void GOAP_Planner::CreateActionPlan(AActor* a_pAIAgent, TSet<GOAP_Action*> a_sAvailableActions, TSet<TPair<FString, bool>>& a_smWorldState, TSet<TPair<FString, bool>>& a_smGoalState, TQueue<GOAP_Action*>* a_qActionPlan)
+{
+	//Reset all of the Action specific variables
+	for (GOAP_Action* pAction : a_sAvailableActions)
+	{
+		pAction->ResetAction();
+	}
+
+	//Find the actions that this agent is currently able to perform
+	TSet<GOAP_Action*> sUsableActions;
+	for (GOAP_Action* pAction : a_sAvailableActions)
+	{
+		if (pAction->FindTarget(a_pAIAgent))//If the agent can actually run that action.
+		{
+			sUsableActions.Add(pAction);
+		}
+	}
+
+	//Create a Tree diagram of every path we are able to take, then ride it to the goal.
+	TArray<Node*> nLeaves;
+	Node* nStartNode = new Node(nullptr, 0, a_smWorldState, nullptr);//Beginning node, for other nodes to parent to.
+	bool bSuccessfulTree = BuildGOAPPlan(nStartNode, nLeaves, sUsableActions, a_smGoalState);
+
+	if (!bSuccessfulTree)
+	{
+		return;//Could not build a successful plan, no combination of actions found that satisfy a goal.
+	}
+
+	//Find the cheapest path from the Tree diagram.
+	Node* nCheapestPlan = nullptr;
+	for (Node* nNode : nLeaves)
+	{
+		if (nCheapestPlan == nullptr)//If cheapest plan has not yet been set.
+		{
+			nCheapestPlan = nNode;
+		}
+		else
+		{
+			if (nNode->m_fCost < nCheapestPlan->m_fCost)//If the cost of the current plan is cheaper than the chosen plan
+			{
+				nCheapestPlan = nNode;//Replace it with the cheaper one
+			}
+		}
+	}
+
+	//Create the final plan of actions
+	TSet<GOAP_Action*> lFinishedPlan = TSet<GOAP_Action*>();
+	while (nCheapestPlan)//While the cheapest plan does not equal the beginning parent node.
+	{
+		if (nCheapestPlan->m_Action)//Null check
+		{
+			lFinishedPlan.Add(nCheapestPlan->m_Action);//Add it to the plan
+		}
+		if (nCheapestPlan->m_nParentNode == nullptr)//Null check
+		{
+			nCheapestPlan = nullptr;//End the while loop
+		}
+		else
+		{
+			nCheapestPlan = nCheapestPlan->m_nParentNode;//Move on to the parent node.
+		}
+	}
+	TArray<GOAP_Action*> lFinishedPlanB = lFinishedPlan.Array();//Convert the Set to a TArray.
+
+	Algo::Reverse(lFinishedPlanB);//Reverse the TArray so that the first action the actor needs to perform is at the beginning of the list.
+
+	a_qActionPlan->Empty();//Empty the ActionQueue
+
+	//Convert the TArray to a Queue to run through
+	for (GOAP_Action* pAction : lFinishedPlanB)
+	{
+		a_qActionPlan->Enqueue(pAction);//Queue the new action.
+	}
+
+	return;
+}
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
