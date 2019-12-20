@@ -54,6 +54,11 @@ body {
         border-color: #f3f3f3;
     }
 
+.section-tablist h6 {
+    text-align: center;
+    vertical-align: middle;
+}
+
 .title {
     text-align: center;
 }
@@ -136,16 +141,15 @@ body {
 }
 
 .Overlaytext {
-    width: 60%;
+    width: 50%;
     color: black;
-    font-size: 20px;
+    font-size: 15px;
     position: absolute;
     top: 25%;
     left: 50%;
     -webkit-transform: translate(-50%, -25%);
     -ms-transform: translate(-50%,-25%);
     transform: translate(-50%, -25%);
-    text-align: center;
     text-align: center;
     vertical-align: middle;
     line-height: 40px;
@@ -208,6 +212,12 @@ iframe {
 }
 
     .about div p {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%,0%);
+        transform: translate(-50%, 0%);
         text-align: left;
         vertical-align: middle;
     }
@@ -219,9 +229,26 @@ iframe {
         width: -moz-calc(100% - 4rem);
         width: calc(100% - 4rem);
         position: relative;
-        height: auto;
+        height: 100%;
     }
 
-    .about .four div {
-        margin: 0;
-    }
+.tempimage {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: -webkit-calc(100% - 4rem);
+    width: -moz-calc(100% - 4rem);
+    width: calc(100% - 4rem);
+    position: relative;
+    height: auto;
+}
+
+.about .four div {
+    margin: 0;
+}
+
+.aboutlist ul {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 0;
+}
